@@ -1,4 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* @import "tailwindcss"; */
+/* @import url("rras3k.css"); */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --badge-bg-color: brown;
+}
+
+.root {
+  width: 100%;
+}
+
+/* TABLET LANDSCAPE */
+@media (min-width: 768px) {
+  .root {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+
+.zone {
+  background-color: white;
+  box-shadow: 2px 7px 13px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: medium;
+
+  & .niv {
+    border-radius: var(--radius-lg);
+    padding: --spacing(6);
+    color: red;
+    font-size: large;
+    min-height: 100px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    background-color: rgb(205, 205, 237);
+    padding-top: 10px;
+  }
+
+  & .numero {
+    background-color: rgb(205, 205, 237);
+    color: red;
+    width: 200px;
+  }
+
+  & .list {
+    color: blue;
+    display: flex;
+    align-items:flex-start;
+  }
+
+
+}
+
+.badge {
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--badge-bg-color);
+  background-color: white;
+  color: var(--badge-bg-color);
+  padding: 3px;
+  margin-right: 2px;
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px 16px 16px 16px;
+  width: 272px;
+
+  box-shadow: 2px 7px 13px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  border-color: #000000;
+
+  .card-body {
+    background-color: #fffcfc;
+    flex-grow: 1;
+    padding: 24px;
+  }
+
+  .card-title {
+    color: #cd1212;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+  }
+
+  .card-text {
+    line-height: 1.4;
+    margin: 10px 0px 0px 0px;
+    font-size: 17px;
+    color: #000000;
+  }
+}
