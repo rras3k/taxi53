@@ -14,6 +14,7 @@ body {
 
 :root {
   --badge-bg-color: brown;
+  --md: 768px;
 }
 
 .root {
@@ -51,18 +52,27 @@ body {
     gap: 10px;
     padding: 10px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 
-  & .zone_core>.niv:nth-child(1) {
+
+@media (min-width: 768px) {
+  .zone_core {
+        justify-content: space-around;
+  }
+}
+
+
+
+  & .zone_core>.niv_contener:nth-child(1) {
     color: red;
   }
 
-  & .zone_core>.niv:nth-child(2) {
+  & .zone_core>.niv_contener:nth-child(2) {
     color: green;
   }
 
-  & .zone_core>.niv:nth-child(3) {
+  & .zone_core>.niv_contener:nth-child(3) {
     color: blue;
   }
 
@@ -77,13 +87,15 @@ body {
     color:blue;
   } */
 
+  & .niv_contener {}
+
   & .niv {
     /* color:inherit; */
     font-size: large;
     min-height: 100px;
     text-align: center;
-    display: grid;
-    grid-template-columns: [first] 30px [line2] auto [end];
+    /* display: grid;
+    grid-template-columns: [first] 30px [line2] auto [end]; */
 
     border-radius: 5px;
     border-width: 1px;
@@ -102,6 +114,12 @@ body {
       margin-bottom: auto;
       /* color: var(--color-base); */
       color: currentColor;
+
+      & i {
+
+        font-size: small;
+        /* color:color-mix(in srgb, currentColor 20%, transparent); */
+      }
     }
 
 
@@ -139,17 +157,18 @@ body {
       border-style: solid;
       border-color: currentColor;
       background-color: currentColor;
-      display:flex;
+      display: flex;
     }
 
     & .coef {
       width: 100%;
-        margin-right: 5px;
+      margin-right: 5px;
       margin-top: auto;
       margin-bottom: auto;
       margin-left: 5px;
       background-color: currentColor;
-text-align: right;
+      text-align: right;
+
       & span {
 
         color: color-mix(in srgb, currentColor 10%, white);
@@ -166,7 +185,6 @@ text-align: right;
     }
   }
 }
-
 
 
 
